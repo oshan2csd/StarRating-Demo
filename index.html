@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>4k Television Ratings</title>
+</head>
+
+
+<body>
+  <div class="container">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>4k Television</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="sony">
+            <td>Sony 4k TV</td>
+            <td>
+              <div class="stars-outer">
+                <div class="stars-inner"></div>
+              </div>
+              <span class="number-rating"></span>
+            </td>
+          </tr>
+          <tr class="panasonic">
+            <td>Panasonic 4k TV</td>
+            <td>
+              <div class="stars-outer">
+                <div class="stars-inner"></div>
+              </div>
+              <span class="number-rating"></span>
+            </td>
+          </tr>          
+          <tr class="phillips">
+              <td>Phillips 4k TV</td>
+              <td>
+                <div class="stars-outer">
+                  <div class="stars-inner"></div>
+                </div>
+                <span class="number-rating"></span>
+              </td>
+            </tr>          
+            <tr class="hisnese">
+                <td>Hisnese 4k TV</td>
+                <td>
+                  <div class="stars-outer">
+                    <div class="stars-inner"></div>
+                  </div>
+                  <span class="number-rating"></span>
+                </td>
+              </tr>          
+              <tr class="samsung">
+                  <td>Samsung 4k TV</td>
+                  <td>
+                    <div class="stars-outer">
+                      <div class="stars-inner"></div>
+                    </div>
+                    <span class="number-rating"></span>
+                  </td>
+                </tr>   
+        </tbody>
+      </table>          
+  </div>
+  <script>
+    //initial ratings
+    const ratings = {
+      sony:4.1,
+      samsung:4.3,
+      phillips:4.0,
+      panasonic:4.9,
+      Hisense:4.8
+    }
+
+    //toatal stars (Max)
+    const starsTotal = 5;
+    
+    //run get ratings ufnction()
+    document.addEventListener('DOMContentLoaded', getRatings());
+
+
+    //get ratings
+    function getRatings() {
+      for(let rating in ratings){
+        //console.log(ratings[rating]);
+        
+        //get percentage
+        const starPercentage = (ratings[rating]/starsTotal)*100;
+
+        //round to nearst 10
+        const starPercentageRounded = `${Math.round(starPercentage/10)*10}%`;
+
+        console.log(starPercentageRounded);
+        
+        //set width 
+      }
+    }
+  </script>
+</body>
+
+
+</html>
